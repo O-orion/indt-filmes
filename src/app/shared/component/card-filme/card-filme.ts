@@ -9,5 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card-filme.css',
 })
 export class CardFilme {
-  movie = input.required<Filme>();
+  // Descomente a linha abaixo para receber o filme como input
+  // movie = input.required<Filme>();
 }

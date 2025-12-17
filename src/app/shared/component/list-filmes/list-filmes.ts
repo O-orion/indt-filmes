@@ -10,16 +10,18 @@ import { CardFilme } from '../card-filme/card-filme';
   styleUrl: './list-filmes.css',
 })
 export class ListFilmes {
- filmes = input.required<Filme[]>();
- titulo = input.required<string>();
+  // descomente as linhas abaixo para receber os filmes e o título como inputs
+ // filmes = input.required<Filme[]>();
+ // titulo = input.required<string>();
 
- // Referência ao elemento de scroll usando viewChild (Angular 17.3+)
-  carousel = viewChild<ElementRef<HTMLDivElement>>('carousel');
+
+ // descomente a linha abaixo para referenciar o elemento do carrossel
+  // carousel = viewChild<ElementRef<HTMLDivElement>>('carousel');
 
   scroll(direction: 'left' | 'right') {
     const el = this.carousel()?.nativeElement;
     if (el) {
-      const scrollAmount = 300; // Largura aproximada do card
+      const scrollAmount = 300;
       el.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'

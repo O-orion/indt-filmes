@@ -12,10 +12,14 @@ import { ListFilmes } from '../../shared/component/list-filmes/list-filmes';
 })
 export class Home {
 
-  private filmeService = inject(FilmeService);
+  // Para que possamos buscar os filmes, injetamos o FilmeService
+  // Para isso descomente a linha abaixo
+  // private filmeService = inject(FilmeService);
 
+  // Criamos um recurso reativo para buscar os filmes populares usando o método getPopularFilmes do FilmeService
+  // Para isso, descomente o código abaixo
   filmesResource = rxResource({
-    stream: () => this.filmeService.getPopularFilmes(),
+    // stream: () => this.filmeService.getPopularFilmes(),
   })  
 
 }
